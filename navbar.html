@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Takshashila University Navbar</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar{
+            background-color:#002147;
+            padding:15px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+
+        .logo-section{
+            display:flex;
+            align-items:center;
+        }
+
+        .logo-section img{
+            width:70px;
+            height:70px;
+        }
+
+        .logo-section h2{
+            color:white;
+            margin-left:10px;
+        }
+
+        .menu{
+            display:flex;
+            gap:20px;
+        }
+
+        .menu a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+        }
+
+        .menu a:hover{
+            color:yellow;
+        }
+
+        .search-box input{
+            padding:5px;
+        }
+
+        #content{
+            text-align:center;
+            font-size:30px;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+
+        <div class="logo-section">
+            <img src="logo-new.png">
+            <h2>Takshashila University</h2>
+        </div>
+
+        <div class="menu">
+            <a href="#" onclick="showPage('Home')">Home</a>
+            <a href="#" onclick="showPage('About')">About</a>
+            <a href="#" onclick="showPage('Services')">Services</a>
+            <a href="#" onclick="showPage('Contact')">Contact</a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+        </div>
+
+    </div>
+
+    <div id="content"></div>
+
+    <script>
+        function showPage(page){
+            document.getElementById("content").innerHTML = "This is " + page + " Page";
+        }
+    </script>
+
+</body>
+</html>
